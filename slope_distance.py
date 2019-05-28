@@ -61,7 +61,7 @@ def slope_distance(baseElev, elv2, dist_betwn_baseElev_elv2, projectedDistance):
 
     slope  = theta
 
-    if projectedDistance != 0: # and less than dist_betwn_baseElev_elv2
+    if projectedDistance != 0 and projectedDistance <= dist_betwn_baseElev_elv2:
         b = abs(projectedDistance) # Tackle negative distances (may occur)
         distance = baseElev + b*math.tan(slope)
 
